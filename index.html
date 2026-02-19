@@ -78,12 +78,21 @@
   .filter-btn { padding: 10px 24px; border: 2px solid #ddd; background: white; font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; color: #666; }
   .filter-btn:hover, .filter-btn.active { background: var(--orange); border-color: var(--orange); color: white; }
   .gallery-item { break-inside: avoid; margin-bottom: 16px; position: relative; overflow: hidden; cursor: pointer; }
-  .gallery-item img { width: 100%; display: block; transition: transform 0.5s ease; }
-  .gallery-item:hover img { transform: scale(1.05); }
-  .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
-  .gallery-item:hover .gallery-overlay { opacity: 1; }
-  .gallery-overlay-label { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: white; letter-spacing: 1px; }
-  .gallery-overlay-cat { font-size: 11px; color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+  .const galleryPhotos = [
+  { label: "IMECA - Exterior", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_1282.jpeg" },
+  { label: "IMECA - Proyecto", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_1269.jpeg" },
+  { label: "IMECA - Detalle", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_1272.jpeg" },
+  { label: "IMECA - Trabajo", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/image000001.jpeg" },
+  { label: "Proyecto Comercial", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_0325.jpeg" },
+  { label: "Proyecto Comercial 2", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_0326.jpeg" },
+  { label: "Proyecto 1", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/0e3da182-33fd-4abe-9cd9-7c8ece14fec0.jpeg" },
+  { label: "Proyecto 2", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/1f34969a-4067-4506-9042-5f997a1c1de4.jpeg" },
+  { label: "Proyecto 3", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/b7bbfe7a-82a7-4ae0-ae89-fe03076238f8.jpeg" },
+  { label: "Proyecto 4", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/ce934083-36d0-4570-b133-9707067288fb.jpeg" },
+  { label: "Proyecto 5", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/d7a9f241-89e5-45b1-a5b7-68d44f66926f.jpeg" },
+  { label: "Proyecto 6", category: "Commercial", src: "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/fb4d1857-967c-4562-b5c9-5d43e8d741a2.jpeg" },
+];
+
   .review-card { min-width: calc(33.333% - 19px); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 40px 36px; position: relative; flex-shrink: 0; transition: all 0.4s; }
   .review-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(232,98,42,0.3); transform: translateY(-6px); }
   .review-stars { color: #FFB800; font-size: 18px; margin-bottom: 20px; }
