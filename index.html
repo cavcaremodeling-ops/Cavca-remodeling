@@ -131,7 +131,84 @@ Aquí está el código completo. Selecciona todo, borra y pega:
   }
 </style>
 </head>
+Aquí está. Ve a index.html → lápiz ✏️ y busca esta línea:
+
 <body>
+
+
+Reemplázala con esto:
+
+<body>
+
+<!-- POPUP DESCUENTO -->
+<div id="discountPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:99999;align-items:center;justify-content:center;">
+  <div style="background:var(--dark);border:2px solid var(--orange);max-width:520px;width:90%;padding:50px 40px;text-align:center;position:relative;animation:popIn 0.4s ease;">
+    <button onclick="closePopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,0.5);font-size:28px;cursor:pointer;line-height:1;">&times;</button>
+    <div style="background:var(--orange);color:white;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;display:inline-block;margin-bottom:20px;">Limited Time / Tiempo Limitado</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:72px;color:white;line-height:1;letter-spacing:2px;">15<span style="color:var(--orange);">%</span></h2>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:white;letter-spacing:2px;margin-bottom:8px;">OFF ANY SERVICE</h3>
+    <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:30px;">Descuento en cualquier servicio / Discount on any service</p>
+    <div style="display:flex;justify-content:center;gap:20px;margin-bottom:30px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div id="popDays" style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--teal);line-height:1;">00</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">Days / Días</div>
+      </div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(255,255,255,0.2);line-height:1;">:</div>
+      <div style="text-align:center;">
+        <div id="popHours" style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--teal);line-height:1;">00</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">Hours / Horas</div>
+      </div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(255,255,255,0.2);line-height:1;">:</div>
+      <div style="text-align:center;">
+        <div id="popMins" style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--teal);line-height:1;">00</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">Mins / Min</div>
+      </div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(255,255,255,0.2);line-height:1;">:</div>
+      <div style="text-align:center;">
+        <div id="popSecs" style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--teal);line-height:1;">00</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">Secs / Seg</div>
+      </div>
+    </div>
+    <a href="#contact" onclick="claimDiscount()" style="display:block;background:var(--orange);color:white;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;padding:18px 40px;text-decoration:none;transition:all 0.3s;margin-bottom:12px;">CLAIM DISCOUNT / RECLAMAR DESCUENTO</a>
+    <button onclick="closePopup()" style="background:none;border:none;color:rgba(255,255,255,0.35);font-size:13px;cursor:pointer;letter-spacing:1px;">No thanks / No gracias</button>
+  </div>
+</div>
+<style>
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+</style>
+<script>
+function closePopup() { document.getElementById('discountPopup').style.display = 'none'; }
+function claimDiscount() {
+  closePopup();
+  const sel = document.querySelector('.contact-form select');
+  const msg = document.querySelector('.contact-form textarea');
+  if (msg) msg.value = '15% discount applied / Descuento del 15% aplicado';
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+// Contador 7 días desde primera visita
+const key = 'cavca_discount_end';
+let endTime = localStorage.getItem(key);
+if (!endTime) { endTime = Date.now() + 7 * 24 * 60 * 60 * 1000; localStorage.setItem(key, endTime); }
+function updatePopupTimer() {
+  const diff = endTime - Date.now();
+  if (diff <= 0) { closePopup(); return; }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('popDays').textContent = String(d).padStart(2,'0');
+  document.getElementById('popHours').textContent = String(h).padStart(2,'0');
+  document.getElementById('popMins').textContent = String(m).padStart(2,'0');
+  document.getElementById('popSecs').textContent = String(s).padStart(2,'0');
+}
+updatePopupTimer();
+setInterval(updatePopupTimer, 1000);
+// Mostrar popup después de 2 segundos
+setTimeout(() => { document.getElementById('discountPopup').style.display = 'flex'; }, 2000);
+</script>
+
+
+Luego Commit changes y listo! El popup aparecerá 2 segundos después de entrar a la página con el contador de 7 días. 🚀​​​​​​​​​​​​​​​​
 
 <nav>
   <div class="nav-logo">
