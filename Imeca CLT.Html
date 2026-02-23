@@ -1,0 +1,166 @@
+Perfecto, tengo todo lo que necesito. Aquí está imeca.html — crea este archivo nuevo en GitHub:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMECA — CAVCA Remodeling</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --orange: #E8622A; --teal: #3AABB5; --dark: #1a1a1a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; color: var(--dark); background: #111; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 60px; background: rgba(17,17,17,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-text .name { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 2px; color: white; line-height: 1; }
+  .logo-text .sub { font-size: 12px; color: var(--teal); font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+  .back-btn { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; transition: all 0.3s; }
+  .back-btn:hover { border-color: var(--orange); color: var(--orange); }
+  .hero { min-height: 60vh; background: var(--dark); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 120px 60px 80px; text-align: center; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(232,98,42,0.15) 0%, transparent 50%), linear-gradient(225deg, rgba(58,171,181,0.1) 0%, transparent 50%); }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-tag { display: inline-block; background: var(--orange); color: white; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 6px 16px; margin-bottom: 20px; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 8vw, 100px); color: white; letter-spacing: 2px; line-height: 1; margin-bottom: 16px; }
+  .hero-title span { color: var(--teal); }
+  .hero-sub { font-size: 18px; color: rgba(255,255,255,0.6); font-weight: 300; margin-bottom: 40px; }
+  .hero-stats { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-top: 40px; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 42px; color: var(--orange); line-height: 1; }
+  .stat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+  .section { padding: 80px 60px; }
+  .section-tag { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 4vw, 58px); color: white; letter-spacing: 2px; margin-bottom: 40px; line-height: 1; }
+  .section-title span { color: var(--teal); }
+  .divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--orange), var(--teal)); margin-bottom: 40px; }
+  .gallery-grid { columns: 3; column-gap: 12px; }
+  .gallery-item { break-inside: avoid; margin-bottom: 12px; position: relative; overflow: hidden; cursor: pointer; }
+  .gallery-item img { width: 100%; display: block; transition: transform 0.5s; }
+  .gallery-item:hover img { transform: scale(1.05); }
+  .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 16px; }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-overlay-text { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: white; letter-spacing: 1px; }
+  .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .video-item { background: #000; border-radius: 4px; overflow: hidden; }
+  .video-item iframe { width: 100%; height: 360px; border: none; display: block; }
+  .video-label { background: rgba(255,255,255,0.05); color: white; padding: 12px 16px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; }
+  .cta-section { background: linear-gradient(135deg, var(--orange), var(--teal)); padding: 80px 60px; text-align: center; }
+  footer { background: #0a0a0a; color: rgba(255,255,255,0.4); text-align: center; padding: 40px 60px; font-size: 13px; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: white; letter-spacing: 3px; margin-bottom: 8px; }
+  .footer-logo span { color: var(--teal); }
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; } .section { padding: 60px 24px; }
+    .hero { padding: 100px 24px 60px; } .gallery-grid { columns: 2; }
+    .hero-stats { gap: 24px; } .cta-section { padding: 60px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_2697.png" style="width:44px;height:44px;object-fit:contain;">
+    <div class="logo-text"><div class="name">CAVCA</div><div class="sub">Remodeling</div></div>
+  </a>
+  <a href="index.html" class="back-btn">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Commercial Project / Proyecto Comercial</div>
+    <h1 class="hero-title">IMECA</h1>
+    <p class="hero-sub">Full Commercial Remodel — Charlotte, NC</p>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <span style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:6px 16px;font-size:12px;letter-spacing:1px;">Demolition</span>
+      <span style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:6px 16px;font-size:12px;letter-spacing:1px;">Flooring</span>
+      <span style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:6px 16px;font-size:12px;letter-spacing:1px;">Painting</span>
+      <span style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:6px 16px;font-size:12px;letter-spacing:1px;">Drywall</span>
+      <span style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:6px 16px;font-size:12px;letter-spacing:1px;">Concrete</span>
+      <span style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:6px 16px;font-size:12px;letter-spacing:1px;">Electrical</span>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">1</div><div class="stat-label">Location</div></div>
+      <div><div class="stat-num">12+</div><div class="stat-label">Photos</div></div>
+      <div><div class="stat-num">5</div><div class="stat-label">Videos</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-tag">Project Gallery / Galería del Proyecto</div>
+  <h2 class="section-title">PHOTOS / <span>FOTOS</span></h2>
+  <div class="divider"></div>
+  <div class="gallery-grid" id="imecaGallery"></div>
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:9999;align-items:center;justify-content:center;flex-direction:column;">
+    <button onclick="closeLightbox()" style="position:absolute;top:24px;right:32px;background:none;border:none;color:white;font-size:40px;cursor:pointer;">&times;</button>
+    <button onclick="lbNav(-1)" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:white;font-size:32px;cursor:pointer;padding:12px 18px;">&#8249;</button>
+    <button onclick="lbNav(1)" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:white;font-size:32px;cursor:pointer;padding:12px 18px;">&#8250;</button>
+    <img id="lbImg" src="" style="max-width:90vw;max-height:80vh;object-fit:contain;">
+    <div id="lbCounter" style="color:rgba(255,255,255,0.4);font-size:13px;margin-top:12px;"></div>
+  </div>
+</section>
+
+<section class="section" style="background:#0d0d0d;padding-top:80px;">
+  <div class="section-tag">Project Videos / Videos del Proyecto</div>
+  <h2 class="section-title">VIDEOS</h2>
+  <div class="divider"></div>
+  <div class="video-grid">
+    <div class="video-item"><iframe src="https://drive.google.com/file/d/1LSgRGJyADqHf-yTYEYcGJAvkDCBqa6_O/preview" allow="autoplay"></iframe><div class="video-label">IMECA — Video 1</div></div>
+    <div class="video-item"><iframe src="https://drive.google.com/file/d/1eE4g4Vwai7SPMlGmHYScls97Rc7pKI2C/preview" allow="autoplay"></iframe><div class="video-label">IMECA — Video 2</div></div>
+    <div class="video-item"><iframe src="https://drive.google.com/file/d/1FawzK7p4ouQBs6k-j2ZMId7d9qsioJOI/preview" allow="autoplay"></iframe><div class="video-label">IMECA — Video 3</div></div>
+    <div class="video-item"><iframe src="https://drive.google.com/file/d/1TjuBbxPXN59aZRBnN0Q1YF2ByEJA019f/preview" allow="autoplay"></iframe><div class="video-label">IMECA — Video 4</div></div>
+    <div class="video-item"><iframe src="https://drive.google.com/file/d/1vcNrtxLbzxtvblSFoyooZEPpG2ffwA63/preview" allow="autoplay"></iframe><div class="video-label">IMECA — Video 5</div></div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:white;letter-spacing:2px;margin-bottom:16px;">READY FOR YOUR PROJECT?</h2>
+  <p style="font-size:18px;color:rgba(255,255,255,0.85);margin-bottom:40px;font-weight:300;">¿Listo para tu proyecto? Contáctanos hoy.</p>
+  <a href="index.html#contact" style="display:inline-block;background:white;color:var(--orange);font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;padding:18px 50px;text-decoration:none;">GET A FREE QUOTE</a>
+</div>
+
+<footer>
+  <div class="footer-logo">CAVCA <span>Remodeling</span></div>
+  <p style="margin-top:8px;">© 2025 CAVCA Remodeling | 704-670-7539 | Cavcaremodeling@gmail.com</p>
+</footer>
+
+<script>
+const BASE = "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/";
+const photos = [
+  BASE+"IMG_1282.jpeg",
+  BASE+"IMG_1269.jpeg",
+  BASE+"d7a9f241-89e5-45b1-a5b7-68d44f66926f.jpeg",
+  BASE+"IMG_1272.jpeg",
+  BASE+"image000001.jpeg",
+  BASE+"IMG_0325.jpeg",
+  BASE+"IMG_0326.jpeg",
+  BASE+"0e3da182-33fd-4abe-9cd9-7c8ece14fec0.jpeg",
+  BASE+"1f34969a-4067-4506-9042-5f997a1c1de4.jpeg",
+  BASE+"b7bbfe7a-82a7-4ae0-ae89-fe03076238f8.jpeg",
+  BASE+"ce934083-36d0-4570-b133-9707067288fb.jpeg",
+  BASE+"fb4d1857-967c-4562-b5c9-5d43e8d741a2.jpeg",
+];
+let currentIdx = 0;
+const gallery = document.getElementById('imecaGallery');
+photos.forEach((src, i) => {
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  item.innerHTML = `<img src="${src}" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-text">IMECA</div></div>`;
+  item.onclick = () => { currentIdx = i; openLightbox(); };
+  gallery.appendChild(item);
+});
+function openLightbox() { document.getElementById('lightbox').style.display = 'flex'; document.body.style.overflow = 'hidden'; updateLightbox(); }
+function updateLightbox() { document.getElementById('lbImg').src = photos[currentIdx]; document.getElementById('lbCounter').textContent = `${currentIdx+1} / ${photos.length}`; }
+function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; document.body.style.overflow = ''; }
+function lbNav(dir) { currentIdx = (currentIdx + dir + photos.length) % photos.length; updateLightbox(); }
+document.addEventListener('keydown', e => { if (document.getElementById('lightbox').style.display === 'flex') { if (e.key === 'ArrowRight') lbNav(1); if (e.key === 'ArrowLeft') lbNav(-1); if (e.key === 'Escape') closeLightbox(); } });
+document.getElementById('lightbox').addEventListener('click', function(e) { if (e.target === this) closeLightbox(); });
+</script>
+</body>
+</html>
+
+
+Crea el archivo imeca.html en GitHub con este código. Luego necesitamos actualizar el index.html para reducir las fotos de IMECA a solo 3 y agregar el botón. ¿Quieres que genere el index.html completo actualizado también? 🚀​​​​​​​​​​​​​​​​
