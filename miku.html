@@ -103,7 +103,84 @@
   </div>
 </section>
 
+Perfecto. Aquí está la sección del before/after para agregar a miku.html.
+Ve a miku.html → lápiz ✏️ y busca:
+
 <section class="section" style="background:#0d0d0d;padding-top:80px;">
+
+
+Y justo ANTES pega esta sección completa:
+
+<section style="padding:80px 60px;background:#111;">
+  <div style="text-align:center;margin-bottom:50px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#E8622A;margin-bottom:12px;">Transformation / Transformación</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,58px);color:white;letter-spacing:2px;line-height:1;">BEFORE <span style="color:#3AABB5;">& AFTER</span></h2>
+    <div style="width:60px;height:3px;background:linear-gradient(90deg,#E8622A,#3AABB5);margin:20px auto 0;"></div>
+  </div>
+
+  <!-- SLIDER 1 -->
+  <div style="margin-bottom:16px;text-align:center;">
+    <p style="color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Bar Area / Área del Bar</p>
+  </div>
+  <div class="ba-slider" id="slider1" style="position:relative;width:100%;max-width:900px;margin:0 auto 60px;overflow:hidden;cursor:ew-resize;user-select:none;">
+    <img src="https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_1202.jpeg" style="width:100%;display:block;">
+    <div class="ba-before" id="before1" style="position:absolute;top:0;left:0;width:50%;height:100%;overflow:hidden;">
+      <img src="https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_4405.jpeg" style="width:100vw;max-width:900px;display:block;">
+    </div>
+    <div class="ba-handle" id="handle1" style="position:absolute;top:0;left:50%;width:4px;height:100%;background:#E8622A;cursor:ew-resize;transform:translateX(-50%);">
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#E8622A;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(0,0,0,0.5);">
+        <span style="color:white;font-size:18px;letter-spacing:-2px;">◀▶</span>
+      </div>
+    </div>
+    <div style="position:absolute;top:16px;left:16px;background:rgba(0,0,0,0.7);color:white;padding:6px 14px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;">BEFORE</div>
+    <div style="position:absolute;top:16px;right:16px;background:#E8622A;color:white;padding:6px 14px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;">AFTER</div>
+  </div>
+
+  <!-- SLIDER 2 -->
+  <div style="margin-bottom:16px;text-align:center;">
+    <p style="color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Main Bar / Barra Principal</p>
+  </div>
+  <div class="ba-slider" id="slider2" style="position:relative;width:100%;max-width:900px;margin:0 auto;overflow:hidden;cursor:ew-resize;user-select:none;">
+    <img src="https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_1201.jpeg" style="width:100%;display:block;">
+    <div class="ba-before" id="before2" style="position:absolute;top:0;left:0;width:50%;height:100%;overflow:hidden;">
+      <img src="https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_4399.jpeg" style="width:100vw;max-width:900px;display:block;">
+    </div>
+    <div class="ba-handle" id="handle2" style="position:absolute;top:0;left:50%;width:4px;height:100%;background:#E8622A;cursor:ew-resize;transform:translateX(-50%);">
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#E8622A;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(0,0,0,0.5);">
+        <span style="color:white;font-size:18px;letter-spacing:-2px;">◀▶</span>
+      </div>
+    </div>
+    <div style="position:absolute;top:16px;left:16px;background:rgba(0,0,0,0.7);color:white;padding:6px 14px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;">BEFORE</div>
+    <div style="position:absolute;top:16px;right:16px;background:#E8622A;color:white;padding:6px 14px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;">AFTER</div>
+  </div>
+</section>
+
+<script>
+function initSlider(sliderId, beforeId, handleId) {
+  const slider = document.getElementById(sliderId);
+  const before = document.getElementById(beforeId);
+  const handle = document.getElementById(handleId);
+  let dragging = false;
+  function setPos(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = (x - rect.left) / rect.width * 100;
+    pct = Math.min(Math.max(pct, 2), 98);
+    before.style.width = pct + '%';
+    handle.style.left = pct + '%';
+  }
+  slider.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
+  window.addEventListener('mouseup', () => dragging = false);
+  window.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+  slider.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); });
+  window.addEventListener('touchend', () => dragging = false);
+  window.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); });
+}
+initSlider('slider1','before1','handle1');
+initSlider('slider2','before2','handle2');
+</script>
+
+
+Commit changes y listo! Tendrás 2 sliders interactivos donde arrastras la línea naranja para ver la transformación. 🚀​​​​​​​​​​​​​​​​
   <div class="section-tag">Project Videos / Videos del Proyecto</div>
   <h2 class="section-title">VIDEOS</h2>
   <div class="divider"></div>
