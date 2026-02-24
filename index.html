@@ -1,4 +1,4 @@
-Aquí está. Selecciona todo, borra y pega:
+Aquí está el index.html completo actualizado con el botón de IMECA. Selecciona todo, borra y pega:
 
 <!DOCTYPE html>
 <html lang="en">
@@ -289,10 +289,13 @@ Aquí está. Selecciona todo, borra y pega:
   </div>
 </section>
 
-<!-- BOTON MIKU - FUERA DEL PORTFOLIO -->
+<!-- BOTONES PROYECTOS -->
 <div style="background:#f8f8f8;text-align:center;padding:50px 60px 80px;">
-  <p style="color:#666;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Featured Project / Proyecto Destacado</p>
-  <a href="miku.html" style="display:inline-block;background:#E8622A;color:white;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;padding:22px 60px;text-decoration:none;">VER PROYECTO COMPLETO — MIKU ASIAN KITCHEN →</a>
+  <p style="color:#666;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">Featured Projects / Proyectos Destacados</p>
+  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+    <a href="miku.html" style="display:inline-block;background:#E8622A;color:white;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:20px 40px;text-decoration:none;">VER PROYECTO COMPLETO — MIKU →</a>
+    <a href="ImecaClt.html" style="display:inline-block;background:#3AABB5;color:white;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:20px 40px;text-decoration:none;">VER PROYECTO COMPLETO — IMECA CLT →</a>
+  </div>
 </div>
 
 <section id="reviews" style="padding:120px 60px;background:#0f0f0f;overflow:hidden;">
@@ -385,22 +388,13 @@ function updatePopupTimer() {
 }
 updatePopupTimer();
 setInterval(updatePopupTimer, 1000);
-setTimeout(() => { document.getElementById('discountPopup').style.display = 'flex'; }, 28000);
+setTimeout(() => { document.getElementById('discountPopup').style.display = 'flex'; }, 25000);
 
 const BASE = "https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/";
 const galleryPhotos = [
-  { label: "IMECA - Exterior", category: "Commercial", src: BASE+"IMG_1282.jpeg" },
-  { label: "IMECA - Proyecto 1", category: "Commercial", src: BASE+"IMG_1269.jpeg" },
-  { label: "IMECA - Proyecto 2", category: "Commercial", src: BASE+"IMG_1272.jpeg" },
-  { label: "IMECA - Interior", category: "Commercial", src: BASE+"image000001.jpeg" },
-  { label: "Proyecto Comercial 1", category: "Commercial", src: BASE+"IMG_0325.jpeg" },
-  { label: "Proyecto Comercial 2", category: "Commercial", src: BASE+"IMG_0326.jpeg" },
-  { label: "Proyecto 1", category: "Commercial", src: BASE+"0e3da182-33fd-4abe-9cd9-7c8ece14fec0.jpeg" },
-  { label: "Proyecto 2", category: "Commercial", src: BASE+"1f34969a-4067-4506-9042-5f997a1c1de4.jpeg" },
-  { label: "Proyecto 3", category: "Commercial", src: BASE+"b7bbfe7a-82a7-4ae0-ae89-fe03076238f8.jpeg" },
-  { label: "Proyecto 4", category: "Commercial", src: BASE+"ce934083-36d0-4570-b133-9707067288fb.jpeg" },
-  { label: "Proyecto 5", category: "Commercial", src: BASE+"d7a9f241-89e5-45b1-a5b7-68d44f66926f.jpeg" },
-  { label: "Proyecto 6", category: "Commercial", src: BASE+"fb4d1857-967c-4562-b5c9-5d43e8d741a2.jpeg" },
+  { label: "IMECA CLT", category: "Commercial", src: BASE+"IMG_1282.jpeg" },
+  { label: "IMECA CLT", category: "Commercial", src: BASE+"IMG_1269.jpeg" },
+  { label: "IMECA CLT", category: "Commercial", src: BASE+"d7a9f241-89e5-45b1-a5b7-68d44f66926f.jpeg" },
   { label: "Miku Asian Kitchen", category: "Commercial", src: BASE+"IMG_1202.jpeg" },
   { label: "Miku Asian Kitchen", category: "Commercial", src: BASE+"IMG_1201.jpeg" },
   { label: "Miku Asian Kitchen", category: "Commercial", src: BASE+"IMG_1200.jpeg" },
@@ -493,4 +487,4 @@ setInterval(() => goTo((current + 1) % total), 4000);
 </html>
 
 
-Selecciona todo → borra → pega → Commit changes y espera 2-3 minutos. El botón ahora está completamente fuera de la sección del portfolio así que definitivamente aparecerá. 🚀​​​​​​​​​​​​​​​​
+Selecciona todo → borra → pega → Commit changes. Ahora tendrás ambos botones juntos debajo del portfolio — Miku en naranja e IMECA en teal. 🚀​​​​​​​​​​​​​​​​
