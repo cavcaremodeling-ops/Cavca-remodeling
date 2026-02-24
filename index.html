@@ -23,7 +23,16 @@ Aquí está el index.html completo actualizado con el botón de IMECA. Seleccion
   .nav-social { display: flex; gap: 12px; align-items: center; margin-left: 10px; }
   .nav-social a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: white; transition: all 0.3s; }
   .nav-social a:hover { background: var(--orange); transform: translateY(-2px); }
-  .nav-social svg { width: 16px; height: 16px; }
+  ..nav-social svg { width: 16px; height: 16px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { width: 26px; height: 2px; background: var(--dark); display: block; transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; inset: 0; background: rgba(26,26,26,0.98); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: white; text-decoration: none; letter-spacing: 3px; transition: color 0.3s; }
+.mobile-menu a:hover { color: var(--orange); }
+.mobile-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: white; font-size: 40px; cursor: pointer; }
+@media (max-width: 900px) { .hamburger { display: flex; } .nav-social { display: none; } }
+
   #hero { min-height: 100vh; background: var(--dark); display: flex; align-items: center; position: relative; overflow: hidden; padding: 100px 60px 60px; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(232,98,42,0.15) 0%, transparent 50%), linear-gradient(225deg, rgba(58,171,181,0.1) 0%, transparent 50%); }
   .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; }
@@ -161,7 +170,20 @@ Aquí está el index.html completo actualizado con el botón de IMECA. Seleccion
     <img src="https://raw.githubusercontent.com/cavcaremodeling-ops/Cavca-remodeling/main/IMG_2697.png" style="width:48px;height:48px;object-fit:contain;">
     <div class="logo-text"><div class="name">CAVCA</div><div class="sub">Remodeling</div></div>
   </div>
-  <ul class="nav-links">
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+  <span></span><span></span><span></span>
+</button>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
+  <a href="#hero" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
+  <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services / Servicios</a>
+  <a href="#about" onclick="document.getElementById('mobileMenu').classList.remove('open')">About / Nosotros</a>
+  <a href="#portfolio" onclick="document.getElementById('mobileMenu').classList.remove('open')">Portfolio</a>
+  <a href="#video" onclick="document.getElementById('mobileMenu').classList.remove('open')">Video</a>
+  <a href="#reviews" onclick="document.getElementById('mobileMenu').classList.remove('open')">Reviews</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')" style="color:var(--orange);">Quote / Cotización</a>
+</div>
+
     <li><a href="#hero">Home</a></li>
     <li><a href="#services">Services / Servicios</a></li>
     <li><a href="#about">About / Nosotros</a></li>
@@ -293,8 +315,8 @@ Aquí está el index.html completo actualizado con el botón de IMECA. Seleccion
 <div style="background:#f8f8f8;text-align:center;padding:50px 60px 80px;">
   <p style="color:#666;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">Featured Projects / Proyectos Destacados</p>
   <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
-    <a href="miku.html" style="display:inline-block;background:#E8622A;color:white;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:20px 40px;text-decoration:none;">VER PROYECTO COMPLETO — MIKU →</a>
-    <a href="ImecaClt.html" style="display:inline-block;background:#3AABB5;color:white;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:20px 40px;text-decoration:none;">VER PROYECTO COMPLETO — IMECA CLT →</a>
+    <a href="miku.html" style="display:inline-block;background:#E8622A;color:white;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:20px 40px;text-decoration:none;">VIEW FULL PROJECT / VER PROYECTO COMPLETO — MIKU →</a>
+    <a href="ImecaClt.html" style="display:inline-block;background:#3AABB5;color:white;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:20px 40px;text-decoration:none;"> VIEW FULL PROJECT / VER PROYECTO COMPLETO — IMECA CLT →</a>
   </div>
 </div>
 
