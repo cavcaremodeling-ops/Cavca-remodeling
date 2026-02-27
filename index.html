@@ -157,7 +157,8 @@ src="https://www.facebook.com/tr?id=1984408835442976&ev=PageView&noscript=1"
   .video-label { background: rgba(0,0,0,0.7); color: white; padding: 12px 16px; font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; }
   @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   @media (max-width: 900px) {
-    nav { padding: 16px 24px; } .nav-links { display: none; }
+    nav { padding: 16px 24px; } .nav-links { display: none !important; } .nav-social { display: none !important; } .hamburger { display: flex !important; }
+
     #hero { padding: 100px 24px 120px; } .hero-stats { right: 24px; gap: 24px; } .stat-num { font-size: 36px; }
     #services { padding: 80px 24px; } #about { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
     .about-img-placeholder { display: none; } #contact { padding: 80px 24px; }
