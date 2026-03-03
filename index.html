@@ -431,7 +431,9 @@ function closePopup() { document.getElementById('discountPopup').style.display =
 function claimDiscount() { closePopup(); const msg = document.querySelector('.contact-form textarea'); if (msg) msg.value = '15% discount applied / Descuento del 15% aplicado'; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }
 const key = 'cavca_discount_end';
 let endTime = localStorage.getItem(key);
-if (!endTime) { endTime = Date.now() + 7 * 24 * 60 * 60 * 1000; localStorage.setItem(key, endTime); }
+if (!endTime || isNaN(endTime)) { endTime = Date.now() + 7 * 24 * 60 * 60 * 1000; try { localStorage.setItem(key, endTime); } catch(e) {} }
+endTime = parseInt(endTime);
+
 function updatePopupTimer() {
   const diff = endTime - Date.now();
   if (diff <= 0) { closePopup(); return; }
