@@ -159,7 +159,7 @@ body{font-family:'Barlow',sans-serif;background:#0d2b1a;min-height:100vh}
 </div>
 
 <!-- ADMIN PANEL -->
-<div class="admin-panel" id="adminPanel">
+<div class="admin-panel" id="adminPanel" style="display:none">
   <div id="adminLogin">
     <input type="password" id="adminPass" placeholder="Password" style="width:100%;padding:12px;border:1.5px solid rgba(255,255,255,0.15);border-radius:10px;background:rgba(255,255,255,0.06);color:#fff;font-size:15px;font-family:Barlow;outline:none;margin-bottom:10px;text-align:center" onkeydown="if(event.key==='Enter')checkAdminPass()">
     <button onclick="checkAdminPass()" style="width:100%;background:var(--gold);border:none;border-radius:10px;padding:12px;font-family:'Bebas Neue';font-size:18px;letter-spacing:2px;color:#1a1a1a;cursor:pointer">ENTER</button>
@@ -267,7 +267,12 @@ function showSuccess() {
 
 function toggleAdmin() {
   const panel = document.getElementById('adminPanel');
-  panel.classList.toggle('open');
+  if (panel.style.display === 'block') {
+    panel.style.display = 'none';
+  } else {
+    panel.style.display = 'block';
+    panel.scrollIntoView({behavior:'smooth'});
+  }
 }
 
 function checkAdminPass() {
