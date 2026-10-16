@@ -203,6 +203,17 @@ function buyVenmo() {
   const amt = prices[selectedQty];
   const note = encodeURIComponent('CAVCA Raffle ' + selectedQty + ' ticket(s) - ' + name + ' ' + phone);
   document.getElementById('venmoBtn').href = 'https://venmo.com/cavca?txn=pay&amount=' + amt + '&note=' + note;
+  fetch('https://formspree.io/f/xppqkbwn', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    name: name,
+    phone: phone,
+    tickets: selectedQty,
+    total: '$' + prices[selectedQty],
+    method: 'Venmo'
+  })
+});
   showSuccess();
   return true;
 }
