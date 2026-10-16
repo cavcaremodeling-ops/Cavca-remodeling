@@ -211,8 +211,20 @@ function registerOnly() {
   const name = document.getElementById('buyName').value.trim();
   const phone = document.getElementById('buyPhone').value.trim();
   if (!name || !phone) { showNotif('Enter name & phone first'); return; }
+  fetch('https://formspree.io/f/xppqkbwn', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      name: name,
+      phone: phone,
+      tickets: selectedQty,
+      total: '$' + prices[selectedQty],
+      method: 'Register & Pay Later'
+    })
+  });
   showSuccess();
 }
+
 
 function showSuccess() {
   document.getElementById('buySection').style.display = 'none';
