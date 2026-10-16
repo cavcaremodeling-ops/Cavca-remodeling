@@ -62,41 +62,49 @@ body{font-family:'Barlow',sans-serif;background:#0d2b1a;min-height:100vh}
 
 <!-- BANNER -->
 <img class="banner-img" src="Rifa-banner.png" alt="CAVCA Christmas Raffle 2026">
+
 <!-- SPOTS -->
 <div class="spots-box" id="spotsBox">
   <div class="spots-label">SPOTS REMAINING / LUGARES DISPONIBLES</div>
   <div class="spots-number" id="spotsNum">20</div>
-  <div class="spots-sub" id="spotsSub">of 20 total spots · 0 per ticket</div>
-  <div class="spots-out" id="spotsOut">🎟 SOLD OUT!</div>
+  <div class="spots-sub" id="spotsSub">of 20 total spots &middot; $20 per ticket</div>
+  <div class="spots-out" id="spotsOut">&#127967; SOLD OUT!</div>
 </div>
 
 <!-- PRIZES -->
 <div class="section">
-  <div class="section-label">3 WINNERS · 3 PRIZES · TOTAL VALUE ,750</div>
+  <div class="section-label">3 WINNERS &middot; 3 PRIZES &middot; TOTAL VALUE $5,750</div>
   <div class="prize-row">
-    <span style="font-size:20px">🥇</span>
-    <div style="flex:1"><div style="font-size:12px;font-weight:700;color:#fff">$3,750 Remodeling Service Credit
-</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Any CAVCA service · Materials + labor included
-</div></div>
-    <div class="prize-val">,750</div>
+    <span style="font-size:20px">&#129351;</span>
+    <div style="flex:1">
+      <div style="font-size:12px;font-weight:700;color:#fff">$3,750 Remodeling Service Credit</div>
+      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Any CAVCA service &middot; Materials + labor included</div>
+    </div>
+    <div class="prize-val">$3,750</div>
   </div>
   <div class="prize-row">
-    <span style="font-size:20px">🥈</span>
-    <div style="flex:1"><div style="font-size:12px;font-weight:700;color:#fff">Full Bathroom Remodel</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Labor included · Client provides materials</div></div>
-    <div class="prize-val">,500</div>
+    <span style="font-size:20px">&#129352;</span>
+    <div style="flex:1">
+      <div style="font-size:12px;font-weight:700;color:#fff">Full Bathroom Remodel</div>
+      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Labor included &middot; Client provides materials</div>
+    </div>
+    <div class="prize-val">$1,500</div>
   </div>
   <div class="prize-row">
-    <span style="font-size:20px">🥉</span>
-    <div style="flex:1"><div style="font-size:12px;font-weight:700;color:#fff">00 CAVCA Service Credit</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Valid for any service · 2025</div></div>
-    <div class="prize-val">00</div>
+    <span style="font-size:20px">&#129353;</span>
+    <div style="flex:1">
+      <div style="font-size:12px;font-weight:700;color:#fff">$500 CAVCA Service Credit</div>
+      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Valid for any service &middot; 2026</div>
+    </div>
+    <div class="prize-val">$500</div>
   </div>
 </div>
 
 <!-- SUCCESS -->
 <div class="success-box" id="successBox">
-  <div style="font-size:40px;margin-bottom:8px">🎉</div>
+  <div style="font-size:40px;margin-bottom:8px">&#127881;</div>
   <div style="font-family:'Bebas Neue';font-size:26px;color:#2ecc71;letter-spacing:2px;margin-bottom:8px">REGISTRATION SENT!</div>
-  <div style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7">Complete your payment via Venmo, Zelle or Cash App.<br>Send your name + phone with the payment.<br>We'll assign your ticket number by DM.<br><br><b style="color:var(--gold)">Venmo @cavca — confirm: 7539</b></div>
+  <div style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7">Complete your payment via Venmo, Zelle or Cash App.<br>Send your name + phone with the payment.<br>We'll assign your ticket number by DM.<br><br><b style="color:var(--gold)">Venmo @cavca &mdash; confirm: 7539</b></div>
 </div>
 
 <!-- BUY FORM -->
@@ -104,53 +112,50 @@ body{font-family:'Barlow',sans-serif;background:#0d2b1a;min-height:100vh}
   <div class="section-label">Get your tickets / Compra tus tickets</div>
   <div class="buy-form">
     <input type="text" class="form-input" id="buyName" placeholder="Your name / Tu nombre">
-    <input type="tel" class="form-input" id="buyPhone" placeholder="Phone / Teléfono (704-xxx-xxxx)">
-    <div class="qty-label">HOW MANY TICKETS? / ¿CUÁNTOS TICKETS?</div>
+    <input type="tel" class="form-input" id="buyPhone" placeholder="Phone / Tel&eacute;fono (704-xxx-xxxx)">
+    <div class="qty-label">HOW MANY TICKETS? / &iquest;CU&Aacute;NTOS TICKETS?</div>
     <div class="qty-row">
-      <div class="qty-btn selected" onclick="selectQty(1,this)">1<br><span style="font-size:10px;font-family:Barlow">0</span></div>
-      <div class="qty-btn" onclick="selectQty(2,this)">2<br><span style="font-size:10px;font-family:Barlow">0</span></div>
-      <div class="qty-btn" onclick="selectQty(3,this)">3<br><span style="font-size:10px;font-family:Barlow">0 🔥</span></div>
+      <div class="qty-btn selected" onclick="selectQty(1,this)">1<br><span style="font-size:10px;font-family:Barlow">$20</span></div>
+      <div class="qty-btn" onclick="selectQty(2,this)">2<br><span style="font-size:10px;font-family:Barlow">$40</span></div>
+      <div class="qty-btn" onclick="selectQty(3,this)">3<br><span style="font-size:10px;font-family:Barlow">$50 &#128293;</span></div>
     </div>
-    <div class="buy-total">Total: <b id="buyTotalAmt">0</b></div>
-    <a id="venmoBtn" href="https://venmo.com/cavca" target="_blank" class="btn-venmo" onclick="return buyVenmo()">📱 PAY WITH VENMO →</a>
-    <div class="btn-register" onclick="registerOnly()">REGISTER & PAY LATER</div>
+    <div class="buy-total">Total: <b id="buyTotalAmt">$20</b></div>
+    <a id="venmoBtn" href="https://venmo.com/cavca" target="_blank" class="btn-venmo" onclick="return buyVenmo()">&#128242; PAY WITH VENMO &rarr;</a>
+    <div class="btn-register" onclick="registerOnly()">REGISTER &amp; PAY LATER</div>
   </div>
   <div class="pay-alts">
     <div class="pay-alt-label">OTHER PAYMENT OPTIONS</div>
-    <div class="pay-pill"><div class="pay-icon z-icon">Z</div>Zelle · 704-670-7539</div>
-    <div class="pay-pill"><div class="pay-icon v-icon">V</div>Venmo · @cavca</div>
-    <div class="pay-pill"><div class="pay-icon c-icon">$</div>Cash App · </div>
-    <div class="pay-note">⚠️ Venmo: confirm last 4 digits — <b style="color:var(--gold)">7539</b></div>
+    <div class="pay-pill"><div class="pay-icon z-icon">Z</div>Zelle &middot; 704-670-7539</div>
+    <div class="pay-pill"><div class="pay-icon v-icon">V</div>Venmo &middot; @cavca</div>
+    <div class="pay-pill"><div class="pay-icon c-icon">$</div>Cash App &middot; $Cavcaremodeling</div>
+    <div class="pay-note">&#9888;&#65039; Venmo: confirm last 4 digits &mdash; <b style="color:var(--gold)">7539</b></div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <div style="text-align:center;padding:20px 16px;font-size:9px;color:rgba(255,255,255,0.2);line-height:1.8">
-  CAVCA Remodeling · 704-670-7539 · Charlotte, NC<br>
-  Drawing live on Instagram · December 9, 2026<br>
-  Winner notified by phone within 24 hours · ❄️ 🎄 ❄️
+  CAVCA Remodeling &middot; 704-670-7539 &middot; Charlotte, NC<br>
+  Drawing live on Instagram &middot; December 9, 2026<br>
+  Winner notified by phone within 24 hours &middot; &#10052;&#65039; &#127876; &#10052;&#65039;
 </div>
 <div style="margin:0 16px 24px;background:rgba(255,255,255,0.03);border-radius:10px;padding:14px">
-  <div style="font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.2);margin-bottom:8px;text-align:center">TERMS & CONDITIONS / TÉRMINOS Y CONDICIONES</div>
+  <div style="font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.2);margin-bottom:8px;text-align:center">TERMS &amp; CONDITIONS / T&Eacute;RMINOS Y CONDICIONES</div>
   <div style="font-size:9px;color:rgba(255,255,255,0.2);line-height:1.7">
-    • 1st prize is a $3,750 credit toward any CAVCA Remodeling service including labor and standard materials. Does not include specialty finishes or premium upgrades.
-<br>
-    • Prize includes labor and standard materials (1 color per room, flat/eggshell finish). Premium paints, accent walls, or specialty finishes not included.<br>
-    • 2nd prize includes labor only. Winner is responsible for all materials.<br>
-    • All prizes must be scheduled within 6 months of winning date.<br>
-    • Prizes are non-transferable and have no cash value.<br>
-    • Winner must be located within 50 miles of Charlotte, NC.<br>
-    • CAVCA Remodeling reserves the right to schedule services based on availability.<br>
-    • Open to residents of NC and SC, 18 years or older.<br>
-    • Employees of CAVCA Remodeling are not eligible.
+    &bull; 1st prize is a $3,750 credit toward any CAVCA Remodeling service including labor and standard materials. Does not include specialty finishes or premium upgrades.<br>
+    &bull; 2nd prize includes labor only. Winner is responsible for all materials.<br>
+    &bull; All prizes must be scheduled within 6 months of winning date.<br>
+    &bull; Prizes are non-transferable and have no cash value.<br>
+    &bull; Winner must be located within 50 miles of Charlotte, NC.<br>
+    &bull; CAVCA Remodeling reserves the right to schedule services based on availability.<br>
+    &bull; Open to residents of NC and SC, 18 years or older.<br>
+    &bull; Employees of CAVCA Remodeling are not eligible.
   </div>
 </div>
-
 
 <!-- ADMIN BAR -->
 <div class="admin-bar">
   <span style="font-size:10px;color:rgba(255,255,255,0.15)">CAVCA Admin</span>
-  <button onclick="toggleAdmin()" style="background:rgba(255,255,255,0.08);border:none;color:rgba(255,255,255,0.3);font-size:11px;padding:6px 12px;border-radius:6px;cursor:pointer">⚙ Admin</button>
+  <button onclick="toggleAdmin()" style="background:rgba(255,255,255,0.08);border:none;color:rgba(255,255,255,0.3);font-size:11px;padding:6px 12px;border-radius:6px;cursor:pointer">&#9881; Admin</button>
 </div>
 
 <!-- ADMIN PANEL -->
@@ -167,11 +172,11 @@ body{font-family:'Barlow',sans-serif;background:#0d2b1a;min-height:100vh}
       <div style="font-size:10px;color:rgba(255,255,255,0.5)">of 20 total</div>
     </div>
     <div class="admin-btn-row">
-      <button class="btn-sell" id="sellBtn" onclick="sellTicket()">✅ TICKET SOLD</button>
+      <button class="btn-sell" id="sellBtn" onclick="sellTicket()">&#10003; TICKET SOLD</button>
       <button class="btn-add" onclick="addSpot()">+ ADD</button>
     </div>
     <div style="font-size:10px;color:rgba(255,255,255,0.3);text-align:center;margin-bottom:12px">
-      To update permanently: change the number in <b style="color:rgba(255,255,255,0.5)">rifa.html</b> line with <b style="color:rgba(255,255,255,0.5)">id="spotsNum"</b> and commit to GitHub
+      To update permanently: change the number in <b style="color:rgba(255,255,255,0.5)">Rifa.html</b> line with <b style="color:rgba(255,255,255,0.5)">id="spotsNum"</b> and commit to GitHub
     </div>
     <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:12px">
       <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-bottom:8px">ACTIVITY LOG</div>
@@ -222,16 +227,16 @@ function buyVenmo() {
   const note = encodeURIComponent('CAVCA Raffle ' + selectedQty + ' ticket(s) - ' + name + ' ' + phone);
   document.getElementById('venmoBtn').href = 'https://venmo.com/cavca?txn=pay&amount=' + amt + '&note=' + note;
   fetch('https://formspree.io/f/xppqkbwn', {
-  method: 'POST',
-  headers: {'Content-Type': 'application/json'},
-  body: JSON.stringify({
-    name: name,
-    phone: phone,
-    tickets: selectedQty,
-    total: '$' + prices[selectedQty],
-    method: 'Venmo'
-  })
-});
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      name: name,
+      phone: phone,
+      tickets: selectedQty,
+      total: '$' + prices[selectedQty],
+      method: 'Venmo'
+    })
+  });
   showSuccess();
   return true;
 }
@@ -253,7 +258,6 @@ function registerOnly() {
   });
   showSuccess();
 }
-
 
 function showSuccess() {
   document.getElementById('buySection').style.display = 'none';
@@ -290,7 +294,7 @@ function sellTicket() {
 }
 
 function addSpot() {
-  spots = Math.min(spots + 1, 20);
+  spots++;
   updateSpotsUI();
   showNotif('Added 1 spot');
 }
