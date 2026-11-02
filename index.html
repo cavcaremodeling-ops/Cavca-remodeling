@@ -527,9 +527,7 @@ function closeXmas(){document.getElementById('xmasPopup').style.display='none';s
 function claimXmas(){spots=Math.max(0,spots-1);updateSpots();document.getElementById('xmasPopup').style.display='none';var msg=document.querySelector('.contact-form textarea');if(msg)msg.value='🎄 Christmas 30% discount — First 20 customers / Descuento navideño 30%';document.getElementById('contact').scrollIntoView({behavior:'smooth'});}
 setTimeout(function(){document.getElementById('xmasPopup').style.display='flex';},5000);
 
-// POPUP 15%
-function closePopup(){document.getElementById('discountPopup').style.display='none';}
-function claimDiscount(){closePopup();var msg=document.querySelector('.contact-form textarea');if(msg)msg.value='15% discount applied / Descuento del 15% aplicado';document.getElementById('contact').scrollIntoView({behavior:'smooth'});}
+
 var endTime;
 try{var stored=localStorage.getItem('cavca_discount_end');endTime=stored?parseInt(stored):null;if(!endTime||isNaN(endTime)||endTime<Date.now()){endTime=Date.now()+(7*24*60*60*1000);localStorage.setItem('cavca_discount_end',endTime);}}catch(e){endTime=Date.now()+(7*24*60*60*1000);}
 function updatePopupTimer(){var diff=endTime-Date.now();if(diff<=0){closePopup();return;}var d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);document.getElementById('popDays').textContent=String(d).padStart(2,'0');document.getElementById('popHours').textContent=String(h).padStart(2,'0');document.getElementById('popMins').textContent=String(m).padStart(2,'0');document.getElementById('popSecs').textContent=String(s).padStart(2,'0');}
