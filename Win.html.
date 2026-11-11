@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1984408835442976');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#E8622A">
+<title>Win Up to $1,500 in Free Labor — CAVCA Remodeling</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#E8622A;--teal:#3AABB5;--dark:#1a1a1a;--gold:#f1c40f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow',Arial,sans-serif;background:var(--dark);color:#fff;min-height:100vh;line-height:1.5}
+.wrap{max-width:520px;margin:0 auto;padding:28px 18px 48px}
+.brand{text-align:center;font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:10px;padding-left:10px}
+.bar{width:64px;height:4px;background:var(--teal);margin:6px auto 22px;border-radius:2px}
+.badge{display:block;width:max-content;margin:0 auto 14px;background:var(--gold);color:#1a1a1a;font-family:'Bebas Neue',sans-serif;letter-spacing:3px;font-size:15px;padding:4px 14px;border-radius:2px}
+h1{font-family:'Bebas Neue',sans-serif;font-weight:400;text-align:center;font-size:clamp(46px,13vw,64px);line-height:.98;letter-spacing:1px}
+h1 span{color:var(--orange)}
+.es{text-align:center;color:rgba(255,255,255,.6);font-size:14px;margin-top:6px}
+.points{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px 0 22px}
+.points span{background:rgba(255,255,255,.08);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:600}
+.card{background:#fff;color:#1a1a1a;border-radius:10px;padding:22px 20px}
+.card h2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:26px;letter-spacing:2px;margin-bottom:12px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin:12px 0 4px}
+input[type=text],input[type=tel],select{width:100%;font:inherit;font-size:16px;padding:13px 12px;border:1.5px solid #d4d4d4;border-radius:6px;background:#fff;color:#1a1a1a}
+input:focus,select:focus{outline:none;border-color:var(--orange)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label.consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:12.5px;font-weight:400;letter-spacing:0;text-transform:none;color:#444}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none}
+button{width:100%;margin-top:18px;background:var(--orange);color:#fff;border:0;border-radius:6px;padding:16px;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px;cursor:pointer}
+button:disabled{opacity:.6}
+.hp{position:absolute;left:-9999px}
+.err{color:#c0392b;font-size:13px;margin-top:10px;display:none}
+.thanks{display:none;text-align:center;padding:10px 0}
+.thanks h2{font-size:34px;color:var(--orange)}
+.thanks a{color:var(--orange);font-weight:700}
+.rules{margin-top:22px;font-size:12.5px;color:rgba(255,255,255,.7)}
+.rules summary{cursor:pointer;font-weight:700;color:#fff;font-size:14px}
+.rules ol{padding-left:18px;margin-top:10px}
+.rules li{margin-bottom:6px}
+.foot{text-align:center;margin-top:26px;font-size:14px;color:rgba(255,255,255,.7)}
+.foot a{color:#fff;font-weight:700;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">CAVCA</div><div class="bar"></div>
+  <span class="badge">CHRISTMAS GIVEAWAY</span>
+  <h1>WIN UP TO <span>$1,500</span><br>IN FREE LABOR</h1>
+  <p class="es">Gana hasta $1,500 en mano de obra gratis</p>
+  <div class="points"><span>30 seconds</span><span>No purchase necessary</span><span>Free estimate for every entry</span></div>
+
+  <div class="card" id="formCard">
+    <h2>ENTER NOW / INSCRÍBETE</h2>
+    <div id="formBox">
+      <div class="row">
+        <div><label for="first_name">First name</label><input type="text" id="first_name" name="first_name" autocomplete="given-name"></div>
+        <div><label for="zip">ZIP code</label><input type="text" id="zip" name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code"></div>
+      </div>
+      <label for="phone">Phone / Teléfono</label>
+      <input type="tel" id="phone" name="phone" placeholder="(704) 000-0000" autocomplete="tel">
+      <label for="project">Your project / Tu proyecto</label>
+      <select id="project" name="project">
+        <option value="">Select...</option>
+        <option>Deck / Fence</option><option>Flooring</option><option>Bathroom</option><option>Kitchen</option>
+        <option>Tile / Backsplash</option><option>Painting</option><option>Screened porch / Pergola</option>
+        <option>Drywall / Repairs</option><option>Concrete</option><option>Other</option>
+      </select>
+      <label for="timeline">When do you want to start?</label>
+      <select id="timeline" name="timeline">
+        <option value="">Select...</option>
+        <option>As soon as possible</option><option>Within 1–3 months</option><option>Just exploring</option>
+      </select>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+      <label class="consent"><input type="checkbox" id="consent"><span>I agree that CAVCA Remodeling may call or text me about my entry and my project. Message and data rates may apply.</span></label>
+      <div class="err" id="err"></div>
+      <button id="go" type="button">ENTER THE GIVEAWAY</button>
+    </div>
+    <div class="thanks" id="thanks">
+      <h2>YOU'RE IN!</h2>
+      <p>Thank you! We'll call or text you shortly about your free estimate.<br>¡Gracias! Te contactaremos pronto.</p>
+      <p style="margin-top:12px">Questions? <a href="tel:7046707539">704-670-7539</a></p>
+    </div>
+  </div>
+
+  <details class="rules">
+    <summary>Official rules</summary>
+    <ol>
+      <li><b>No purchase necessary.</b> Entering does not require you to hire CAVCA Remodeling or buy anything.</li>
+      <li><b>Entry period:</b> now through December 31, 2026, 11:59 PM ET. One entry per person and per phone number.</li>
+      <li><b>Who can enter:</b> adults 18 or older who own or make decisions for a property inside CAVCA Remodeling's service area.</li>
+      <li><b>Prize:</b> one credit of up to $1,500 toward the <b>labor</b> portion of one CAVCA Remodeling project. Materials, permits and work performed by separately licensed trades (such as electrical or plumbing) are not included. No cash value; not transferable.</li>
+      <li><b>Drawing:</b> one winner is chosen at random from all valid entries on or before January 5, 2027. Odds depend on the number of entries. The winner is notified by phone or text and must reply within 7 days, or another winner may be drawn.</li>
+      <li><b>Using the prize:</b> the credit is applied after a written agreement is signed, and the project must be scheduled within 90 days of notification, subject to crew availability. Normal deposit terms apply to the remaining project cost.</li>
+      <li><b>Every entrant</b> may receive a free estimate call. Your information is used only to contact you about your entry and project, and is not sold.</li>
+      <li><b>Sponsor:</b> CAVCA Remodeling, Charlotte, NC · 704-670-7539. Void where prohibited.</li>
+    </ol>
+  </details>
+  <div class="foot">CAVCA Remodeling · Charlotte, NC · Fully insured<br><a href="tel:7046707539">704-670-7539</a> · <a href="index.html">Visit our website</a></div>
+</div>
+<script>
+document.getElementById('go').addEventListener('click',function(){
+  var g=function(id){return document.getElementById(id).value.trim();};
+  var err=document.getElementById('err'); err.style.display='none';
+  var data={first_name:g('first_name'),zip:g('zip'),phone:g('phone'),project:g('project'),timeline:g('timeline'),_honey:document.querySelector('[name=_honey]').value};
+  var digits=data.phone.replace(/\D/g,'');
+  var msg='';
+  if(!data.first_name) msg='Please enter your first name.';
+  else if(digits.length<10) msg='Please enter a valid phone number.';
+  else if(!/^\d{5}$/.test(data.zip)) msg='Please enter your 5-digit ZIP code.';
+  else if(!data.project) msg='Please choose your project.';
+  else if(!data.timeline) msg='Please tell us when you want to start.';
+  else if(!document.getElementById('consent').checked) msg='Please check the box so we can contact you.';
+  if(msg){err.textContent=msg;err.style.display='block';return;}
+  data._subject='CAVCA GIVEAWAY entry - '+data.first_name+' - '+data.project;
+  data._template='table'; data._captcha='false'; data.source='Giveaway QR / win.html'; data.consent_call_text='yes';
+  var btn=this, old=btn.textContent; btn.disabled=true; btn.textContent='SENDING...';
+  fetch('https://formsubmit.co/ajax/cavcaremodeling@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+  .then(function(r){if(!r.ok) throw new Error('bad'); return r.json();})
+  .then(function(){
+    if(window.fbq) fbq('track','Lead');
+    document.getElementById('formBox').style.display='none';
+    document.getElementById('thanks').style.display='block';
+  })
+  .catch(function(){
+    err.textContent='Sorry, it did not send. Please call or text 704-670-7539 to enter.'; err.style.display='block';
+    btn.disabled=false; btn.textContent=old;
+  });
+});
+</script>
+</body>
+</html>
