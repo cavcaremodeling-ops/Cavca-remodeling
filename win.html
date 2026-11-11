@@ -48,6 +48,8 @@ button:disabled{opacity:.6}
 .thanks{display:none;text-align:center;padding:10px 0}
 .thanks h2{font-size:34px;color:var(--orange)}
 .thanks a{color:var(--orange);font-weight:700}
+.thanks a.site-btn{display:block;margin-top:18px;background:var(--orange);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px;padding:15px;border-radius:6px;text-decoration:none;font-weight:400}
+.thanks a.call-btn{display:block;margin-top:10px;border:2px solid var(--orange);color:var(--orange);font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;padding:12px;border-radius:6px;text-decoration:none;font-weight:400}
 .rules{margin-top:22px;font-size:12.5px;color:rgba(255,255,255,.7)}
 .rules summary{cursor:pointer;font-weight:700;color:#fff;font-size:14px}
 .rules ol{padding-left:18px;margin-top:10px}
@@ -65,7 +67,7 @@ button:disabled{opacity:.6}
   <div class="points"><span>30 seconds</span><span>No purchase necessary</span><span>Free estimate for every entry</span></div>
 
   <div class="card" id="formCard">
-    <h2>ENTER NOW / INSCRÍBETE</h2>
+    <h2 id="formTitle">ENTER NOW / INSCRÍBETE</h2>
     <div id="formBox">
       <div class="row">
         <div><label for="first_name">First name</label><input type="text" id="first_name" name="first_name" autocomplete="given-name"></div>
@@ -93,7 +95,8 @@ button:disabled{opacity:.6}
     <div class="thanks" id="thanks">
       <h2>YOU'RE IN!</h2>
       <p>Thank you! We'll call or text you shortly about your free estimate.<br>¡Gracias! Te contactaremos pronto.</p>
-      <p style="margin-top:12px">Questions? <a href="tel:7046707539">704-670-7539</a></p>
+      <a class="site-btn" href="index.html">VISIT OUR WEBSITE →</a>
+      <a class="call-btn" href="tel:7046707539">CALL OR TEXT US</a>
     </div>
   </div>
 
@@ -134,6 +137,7 @@ document.getElementById('go').addEventListener('click',function(){
   .then(function(){
     if(window.fbq) fbq('track','Lead');
     document.getElementById('formBox').style.display='none';
+    document.getElementById('formTitle').style.display='none';
     document.getElementById('thanks').style.display='block';
   })
   .catch(function(){
